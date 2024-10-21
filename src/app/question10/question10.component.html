@@ -1,0 +1,8 @@
+<h3>Shopping Cart</h3>
+<ul>
+  <li *ngFor="let item of cartItems">{{ item }}</li>
+</ul>
+
+<label for="newItem">Add a product:</label>
+<input type="text" id="newItem" [(ngModel)]="newItem" placeholder="Enter product">
+<button (click)="addItem()">Add</button>

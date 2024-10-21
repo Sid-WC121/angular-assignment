@@ -1,0 +1,8 @@
+<form #emailForm="ngForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+    <div *ngIf="emailForm.controls['email'].invalid && emailForm.controls['email'].dirty">
+        Not a valid e-mail address.
+    </div>
+    <p>Status: {{ emailForm.controls['email'].status }}</p>
+</form>
